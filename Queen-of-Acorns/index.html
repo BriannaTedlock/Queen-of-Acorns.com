@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Queen of Acorns</title>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1,0">
+  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQAAABwAAAAnAAAAIYCAgAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAANgAAAIw5fsD/MGuw/zJvs/83ebn/AAEBbgAAAyMAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAKgAAA2EwbrD/Kl+e/yZYlv8sZ6X/JVeT/zFvrP9vw/n/AAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAACcva6f/K2Oi/zZ0sf9Dh8H/SY3H/1KZzf9Kj8X/JF6a/zuGxMkAAAAAAAAAAAAAAAAAAAAAAAAAACAyR/8kT3//KmGc/zd2s/9Hicb/WaTa/2Ct4v9xvOn/b7nj/1yn0/8vbav/AAAAAAAAAAAAAAAAAAAAAB4wRf8aKz7/JUBb/ydZk/9DhcD/VZ3W/2e26v9uwfb/gs34/4TN9/93v+b/NHKv/wAAAAAAAAAAAAAAAAAAAAAbLkH/IjlS/y5SeP8mQ2H/RIW8/12q4P9wwvT/fcj2/6TY9v+m2ff/h87z/1akz/8AAAAAAAAAAAAAAAAAAAAAIThQ/y9Ve/80YY//NmaZ/ylLbf9Um9X/b8H1/4nN9v+t2/T/tt/2/4TO9f80bK3/AAAAAAAAAAAAAAAAAAAAAB80S/8jQF7/N2ma/ytRd/9Beav/LliC/1mh1f9zxPb/ic72/4nP9/9ruOT/LWqp/gAAAAAAAAAAAAAAAAAAAAAoPlj/JUJf/zhrnf82aZr/P3mw/0F3rP8wXYr/MVqC/2Cq2P9eqd7/OHKx/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsuQf8wW4T/Nmmc/0WHvv9Yo9b/O3Kn/y9Ygf8qTXD/JD5Z/yAzR/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJT5a/y1Ue/89ebP/QoK8/zhtof9Ge63/KEho/yVCX/8nPFT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhIlBCM+Wv8sQ17+J0Vj/0N4p/8uVHn/ITpU/yhHZv8hOFD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFY4miKD5Y/yhAW/8zS2j/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD8HwAA/AcAAPgDAADgAwAAwAMAAMADAADAAwAAwAMAAMAHAADgBwAA8AcAAPAPAAD+HwAA//8AAA==" rel="icon" type="image/x-icon" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/feu2lve.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&amp;family=Roboto+Condensed:ital,wght@0,400;0,700;1,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style> /* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Comfortaa; 
+ /* 5% top, 20% right, 5% bottom and 20% left */
+  background-color: white;
+  border: 20px solid #e4c284;
+}
+
+/* Header/logo Title */
+.header {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center; 
+  background-color: white;
+  color: black;
+/*margin: 0% 20% 0% 20%*/
+}
+
+
+/*The Navigation bar with links to Home, Packages, About, and Contact*/
+.nav {
+  display: flex;
+  padding-left: 50%;
+  border-radius: 25px;
+}
+ 
+/* Style the navigation bar links */
+.nav a {
+padding: 14px 20px;
+text-decoration: none;
+text-align: center;
+border: 3px solid white;
+border-radius: 25px;
+}
+
+
+ 
+/* Change color on hover */
+.nav a:hover {
+background-color: #90ae53;
+color: white;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  display: flex;
+  flex-wrap:wrap;
+  flex: 50%;
+  background-color: white;
+  
+}
+
+/* Main column */
+.main {
+  flex: 50%;
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+/* Fake image, just for this example */
+.img {
+  background-color: transparent;
+  width: 100%;
+  padding: 5px;
+}
+
+.footer {
+  padding:20px;
+  text-align: center;
+  background-color: #db5444;
+  width: 100%;
+}
+
+.galleryrow {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+padding: 0 4px;
+margin: 20%;
+
+}
+
+/* Create four equal columns that sits next to each other */
+.gallerycolumn {
+-ms-flex: 25%; /* IE10 */
+flex: 25%;
+max-width: 25%;
+padding: 0 4px;
+}
+
+.gallerycolumn img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+}
+
+button {
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #d5583b;
+  color: white;
+  padding: 20px;
+
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  
+}
+
+/* Caption text */
+.text {
+  color: green;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 20%;
+  text-align: left;
+}
+
+.side2 {
+  flex:25%;
+  flex-wrap: content;
+  
+}
+.menu {
+  flex: 20%;
+  flex-wrap: wrap;
+  text-align: center;
+  color: darkorange;  
+}
+.main2 {
+  flex:25%
+  
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2 s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+@media screen and (max-width: 700px) {
+  .row, .nav {   
+    flex-direction: column;
+  }
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+.gallerycolumn {
+  -ms-flex: 50%;
+  flex: 50%;
+  max-width: 50%;
+}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.gallerycolumn {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+  
+<div style="background:white; padding-top:10px">
+  <img src="https://i.imgur.com/DaAZEu5.png"/></a></div>
+</div> 
+
+	<!-- Navigation Bar -->
+  <div class="nav">
+		<a href="C:\Users\Brian\OneDrive\Desktop\Baileys Website\index.html">Home</a>
+    <a href="C:\Users\Brian\OneDrive\Desktop\Baileys Website\pricing.html">Packages</a>
+		<a href="C:\Users\Brian\OneDrive\Desktop\Baileys Website\about.html">About</a>
+    <a href="C:\Users\Brian\OneDrive\Desktop\Baileys Website\Queen-of-Acorns\src\app\contact.html">Contact</a>
+    <a href="https://www.facebook.com/people/Queen-of-Acorns-Mobile-Bar/100082761544631/" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/queenofacorns/?fbclid=IwAR2dpdROPAguWR-vIeyVQjU0VV4YrBHA_0S1qRuw4uSJExtuQcro4Xwyqiw" class="fa fa-instagram"></a>
+</div>
+  </div>
+
+<!-- Header -->
+<div class="header">
+<img src="https://i.imgur.com/q4HKqOa.png" alt="logo" width="50%">
+<h2><br>"Why go to the bar, when the bar can come to you!”</h2><br>
+<h4><strong><em>“Weddings ~ Corporate Events ~ Graduations ~ Birthdays”</em></strong></h4><br><br>
+<button><strong>See our packages!</strong></button><br><br><br><hr>
+</div>
+ 
+
+<di class="row">
+  <div class="side">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://i.imgur.com/5Gkoq6p.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://i.imgur.com/UPGGuv3.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://i.imgur.com/QqkuBq8.jpg" style="width:100%">
+  <div class="text"><hr></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div></div>
+
+<div class="main">
+  <div style="text-align:center">
+    <a href="https://imgur.com/43Vwlav"><img src="https://i.imgur.com/43Vwlav.png" image="50"/></a>
+  <h6>Queen of Acorns strives to provide excellent and honest mobile drink and bar services at our customer’s events. Our customer care is unmatched and guarantee you will recieve nothing less than superb service. Our team promotes responsible drinking and aims to create a unique enviornment that is safe, comfortable, and fun for all!</h6>
+<br><button>Packages</button><br><br>
+<hr>
+</div>
+</div>
+
+
+
+<div class="side2">
+  <a href="https://imgur.com/8Cso76n"><img src="https://i.imgur.com/8Cso76n.gif" width="50%"/></a></div><hr>
+  <hr>
+  <div class="menu">
+    <h3><br>1. Choose your package<br>2. Select add-ons<br>3. Settle up<br>4. GET DOWN WITH THE QUEEN!<br></h3></div>
+<hr>
+  <div class="main2">
+  <a href="https://imgur.com/BsHQI7v"><img src="https://i.imgur.com/BsHQI7v.gif" width="50%"/></a><hr>
+
+</div>
+<hr>
+<script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+  }
+  </script>
+ <hr>
+<div class="galleryrow">
+  <div class="gallerycolumn">
+    <img src="https://i.imgur.com/cq6D50Z.jpg" >
+    <img src="https://i.imgur.com/QqkuBq8.jpg">
+    <img src="https://i.imgur.com/5yJiFNM.jpg">
+    <img src="https://i.imgur.com/hopXxnq.jpg">
+  </div>
+  
+  <div class="gallerycolumn">
+    <img src="https://i.imgur.com/6lxUHty.jpg">
+    <img src="https://i.imgur.com/eSCwvnD.jpg">
+    <img src="https://i.imgur.com/HvY6S5e.jpg">
+    <img src="https://i.imgur.com/UcH7BVL.jpg">
+  </div>
+      
+  <div class="gallerycolumn">
+    <img src="https://i.imgur.com/rtXCu2x.jpg">
+    <img src="https://i.imgur.com/7Rp5wzu.jpg">
+    <img src="https://i.imgur.com/byEutlp.jpg">
+    <img src="https://i.imgur.com/SO3khAb.jpg">
+  </div>
+      
+  <div class="gallerycolumn">
+    <img src="https://i.imgur.com/v5jJ4jU.jpg">
+    <img src="https://i.imgur.com/VwqRL8k.jpg">
+    <img src="https://i.imgur.com/gyb0Rpl.jpg">
+    <img src="https://i.imgur.com/lwYnYPx.jpg">
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h4>Questions? Email us!</h4>
+  <h5>bailey_swimmer@yahoo.com</h5>
+  <h6>© Queen of Acorns 2023</h6>
+</div>  
+
+</body>
+</html>
