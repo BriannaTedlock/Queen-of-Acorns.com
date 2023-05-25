@@ -1,170 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="style.css" rel="stylesheet" type="text/css" />
-<style>
-  /* You can add global styles to this file, and also import other style files */
+  <title>Queen of Acorns</title>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1,0">
+  <link
+    href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQAAABwAAAAnAAAAIYCAgAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAANgAAAIw5fsD/MGuw/zJvs/83ebn/AAEBbgAAAyMAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAKgAAA2EwbrD/Kl+e/yZYlv8sZ6X/JVeT/zFvrP9vw/n/AAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAACcva6f/K2Oi/zZ0sf9Dh8H/SY3H/1KZzf9Kj8X/JF6a/zuGxMkAAAAAAAAAAAAAAAAAAAAAAAAAACAyR/8kT3//KmGc/zd2s/9Hicb/WaTa/2Ct4v9xvOn/b7nj/1yn0/8vbav/AAAAAAAAAAAAAAAAAAAAAB4wRf8aKz7/JUBb/ydZk/9DhcD/VZ3W/2e26v9uwfb/gs34/4TN9/93v+b/NHKv/wAAAAAAAAAAAAAAAAAAAAAbLkH/IjlS/y5SeP8mQ2H/RIW8/12q4P9wwvT/fcj2/6TY9v+m2ff/h87z/1akz/8AAAAAAAAAAAAAAAAAAAAAIThQ/y9Ve/80YY//NmaZ/ylLbf9Um9X/b8H1/4nN9v+t2/T/tt/2/4TO9f80bK3/AAAAAAAAAAAAAAAAAAAAAB80S/8jQF7/N2ma/ytRd/9Beav/LliC/1mh1f9zxPb/ic72/4nP9/9ruOT/LWqp/gAAAAAAAAAAAAAAAAAAAAAoPlj/JUJf/zhrnf82aZr/P3mw/0F3rP8wXYr/MVqC/2Cq2P9eqd7/OHKx/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsuQf8wW4T/Nmmc/0WHvv9Yo9b/O3Kn/y9Ygf8qTXD/JD5Z/yAzR/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJT5a/y1Ue/89ebP/QoK8/zhtof9Ge63/KEho/yVCX/8nPFT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhIlBCM+Wv8sQ17+J0Vj/0N4p/8uVHn/ITpU/yhHZv8hOFD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFY4miKD5Y/yhAW/8zS2j/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD8HwAA/AcAAPgDAADgAwAAwAMAAMADAADAAwAAwAMAAMAHAADgBwAA8AcAAPAPAAD+HwAA//8AAA=="
+    rel="icon" type="image/x-icon" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/feu2lve.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&amp;family=Roboto+Condensed:ital,wght@0,400;0,700;1,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    /* You can add global styles to this file, and also import other style files */
+
 * {
   box-sizing: border-box;
 }
 
-nav {
-background-color: #333;
-overflow: hidden;
-margin-top: 30px;
-width: 100%;
-}
-  
-nav a {
-float: left;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-  
-nav a:hover {
-background-color: #ddd;
-color: black;
+   
+
+.footer {
+  padding:20px;
+  text-align: center;
+  background-color: #d75939;
+  width: 100%;
 }
 
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 50%;
+  background-color: white;
+
+    }
+
+/* Main column */
+.main {
+flex: 50%;
+background-color: white;
+padding-bottom: 10px;
+}
+
+
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #db5444;
+      width: 100%;
+    }
+
+    
+
+
+    /* Style inputs */
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    /* Style the container/contact section */
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    body {
+  font-family: Comfortaa; 
+  border: 20px solid #5a7238;
+}
+
+/* Header/logo Title */
 .header {
-border-style: solid;
-border-color: white; /* 25px top, 10px right, 4px bottom and 35px left */
+  margin-top: 3%;
+  text-align: center; 
+  background-color: white;
+  
 }
 
-body {
-border-color: white;
-border-radius: 25px;
-margin: 2%;
-padding: 0px;
-background-color: #e4c284;
-border-width: 25px 25px 25px 25px;
-border-style: solid;
+
+
+
+
+ul {
+  list-style-type: none;
+  margin-left: 35%;
+  padding: 0;
+  overflow: hidden;
+ 
 }
 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+.navbar {
+  overflow: hidden;
+  color: white;
+  font-family: Comfortaa;
+  margin-right: 15%;
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar links */
+.navbar a {
+  float: right;
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: black;
+  border-radius: 25px;
+  margin-top: 3%;
+  font-size: large;
+  
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #d75939;
+  border: orange solid 2px;
+  color: white;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #5a7238;
+  color: white;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: black solid 2px;
+  color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #5a7238;
+  color: white;
+}
+
+.fa-instagram {
+  background: #5a7238;
+  color: white;
+}
+
+.fa-envelope-o {
+  background: #5a7238;
+  color: white;
+}
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
 @media screen and (max-width: 500px) {
-  .header a {
+  .navbar a {
     float: none;
     display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
-
-
-}
-
-
-h1 {
-  font-family: cooper-black-std,serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-}
-
-h2  {
-  font-family: Comfortaa;
-  font-weight: 700;
-  text-align: center;
-  font-size: 30px;;
-}
-
-p {
-  text-align: center;
-  font-style: italic;
-  font-size: 25px;
-}
-
-h3 {
-    text-align: center;
-    font-size: 30px;
-    font-style: bold;
-}
-
-
-button {
-  text-align: center;
-  background-color: #57672c;
-  margin-left: 47%;
-  margin-right: 46%;
-  padding: 20px 40px 20px 40px;
-  font-size: 20px;
-}
-
-
-@media screen and (max-width: 500px) {
-  h2 {
-    font-size: 20px;
-  }
-  
-  p {
-    font-size: 15px;
   }
 }
 
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
 
-footer {
-  background-color: #db5444;
-  margin-top: 2%;
-  text-align: center;
-  font-size: 25px;;
-  padding: 5%;
-}
-
-.responsive {
-  display: block;
-  margin-left:auto;
-  margin-right: auto;
-  max-width: 90%;
-  height: auto;
-} 
-
-.row {
-display: flex;
-flex-wrap: wrap;
-padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-flex: 25%;
-max-width: 25%;
-padding: 0 4px;
-}
-
-.column img {
-margin-top: 8px;
-vertical-align: middle;
-width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-.column {
-  flex: 50%;
-  max-width: 50%;
-}
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-.column {
-  flex: 100%;
-  max-width: 100%;
-}
-}
-</style>
-
-<title>Queen of Acorns: Packages</title>
+      .column,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
 </head>
 
 
+<div class="navbar">
+  <img src="https://i.imgur.com/B3lHIWq.png" width="15%">
+<div class="navbar-right">
+ 
+  <a class="active" href="https://queenofacorns.com/contact">Contact</a>
+  <a href="#faq">FAQ</a>
+  <a href="#packages">Packages</a>
+  <a href="#about">About</a>
+  <a href="https://www.queenofacorns.com/">Home</a>
+  </div>
+</div>
 
 
+<div class="header">
 <h1></h1>Queen of Acorns</h1>
 <h2></h2>Packages</h2>
 
@@ -177,12 +275,12 @@ width: 100%;
 <h3>Package 1: <em>Beer and Wine:</em></h3>
 
 <form>
-  <input type="radio" id="beer" name="package_one" value="Beer">
-  <label for="beer">Beer(craft, domestic)</label><br>
-  <input type="radio" id="wine" name="package_one" value="Wine">
-  <label for="wine">Wine (red, white, rose, bubbles) </label><br>
-  <input type="radio" id="hard_seltzer" name="package_one" value="Hard Seltzer">
-  <label for="hard_seltzer">Hard Seltzer</label>
+<input type="radio" id="beer" name="package_one" value="Beer">
+<label for="beer">Beer(craft, domestic)</label><br>
+<input type="radio" id="wine" name="package_one" value="Wine">
+<label for="wine">Wine (red, white, rose, bubbles) </label><br>
+<input type="radio" id="hard_seltzer" name="package_one" value="Hard Seltzer">
+<label for="hard_seltzer">Hard Seltzer</label>
 </form> 
 
 <h3>Package 2: <em>Beer, Wine, Call Liquor</em></h3>
@@ -269,5 +367,15 @@ Tea, Coffee, and Espresso Bar (Pick 3 from a variety of flavor profiles and vary
 
 <input type="submit">
 </form>
+<div class="footer">
+    
+  <div class="socials">
+  <a href="https://www.instagram.com/queenofacorns/?fbclid=IwAR2dpdROPAguWR-vIeyVQjU0VV4YrBHA_0S1qRuw4uSJExtuQcro4Xwyqiw" class="fa fa-instagram"></a>
+  <a href="https://www.facebook.com/people/Queen-of-Acorns-Mobile-Bar/100082761544631/" class="fa fa-facebook"></a>
+  <a href="#email" class="fa fa-envelope-o"></a><br><br></div>
+  </div>
+    </div>
+    </div>
+  </footer>
 </body>
 </html>
