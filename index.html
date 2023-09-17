@@ -2,489 +2,439 @@
 <html lang="en">
 <head>
 <title>Queen of Acorns</title>
-  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,0">  
+<meta charset="utf-8">
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1,0">
-  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAA.EAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQAAABwAAAAnAAAAIYCAgAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAANgAAAIw5fsD/MGuw/zJvs/83ebn/AAEBbgAAAyMAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAKgAAA2EwbrD/Kl+e/yZYlv8sZ6X/JVeT/zFvrP9vw/n/AAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAACcva6f/K2Oi/zZ0sf9Dh8H/SY3H/1KZzf9Kj8X/JF6a/zuGxMkAAAAAAAAAAAAAAAAAAAAAAAAAACAyR/8kT3//KmGc/zd2s/9Hicb/WaTa/2Ct4v9xvOn/b7nj/1yn0/8vbav/AAAAAAAAAAAAAAAAAAAAAB4wRf8aKz7/JUBb/ydZk/9DhcD/VZ3W/2e26v9uwfb/gs34/4TN9/93v+b/NHKv/wAAAAAAAAAAAAAAAAAAAAAbLkH/IjlS/y5SeP8mQ2H/RIW8/12q4P9wwvT/fcj2/6TY9v+m2ff/h87z/1akz/8AAAAAAAAAAAAAAAAAAAAAIThQ/y9Ve/80YY//NmaZ/ylLbf9Um9X/b8H1/4nN9v+t2/T/tt/2/4TO9f80bK3/AAAAAAAAAAAAAAAAAAAAAB80S/8jQF7/N2ma/ytRd/9Beav/LliC/1mh1f9zxPb/ic72/4nP9/9ruOT/LWqp/gAAAAAAAAAAAAAAAAAAAAAoPlj/JUJf/zhrnf82aZr/P3mw/0F3rP8wXYr/MVqC/2Cq2P9eqd7/OHKx/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsuQf8wW4T/Nmmc/0WHvv9Yo9b/O3Kn/y9Ygf8qTXD/JD5Z/yAzR/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJT5a/y1Ue/89ebP/QoK8/zhtof9Ge63/KEho/yVCX/8nPFT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhIlBCM+Wv8sQ17+J0Vj/0N4p/8uVHn/ITpU/yhHZv8hOFD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFY4miKD5Y/yhAW/8zS2j/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD8HwAA/AcAAPgDAADgAwAAwAMAAMADAADAAwAAwAMAAMAHAADgBwAA8AcAAPAPAAD+HwAA//8AAA==" rel="icon" type="image/x-icon" />
+  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQAAABwAAAAnAAAAIYCAgAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAANgAAAIw5fsD/MGuw/zJvs/83ebn/AAEBbgAAAyMAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAKgAAA2EwbrD/Kl+e/yZYlv8sZ6X/JVeT/zFvrP9vw/n/AAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAACcva6f/K2Oi/zZ0sf9Dh8H/SY3H/1KZzf9Kj8X/JF6a/zuGxMkAAAAAAAAAAAAAAAAAAAAAAAAAACAyR/8kT3//KmGc/zd2s/9Hicb/WaTa/2Ct4v9xvOn/b7nj/1yn0/8vbav/AAAAAAAAAAAAAAAAAAAAAB4wRf8aKz7/JUBb/ydZk/9DhcD/VZ3W/2e26v9uwfb/gs34/4TN9/93v+b/NHKv/wAAAAAAAAAAAAAAAAAAAAAbLkH/IjlS/y5SeP8mQ2H/RIW8/12q4P9wwvT/fcj2/6TY9v+m2ff/h87z/1akz/8AAAAAAAAAAAAAAAAAAAAAIThQ/y9Ve/80YY//NmaZ/ylLbf9Um9X/b8H1/4nN9v+t2/T/tt/2/4TO9f80bK3/AAAAAAAAAAAAAAAAAAAAAB80S/8jQF7/N2ma/ytRd/9Beav/LliC/1mh1f9zxPb/ic72/4nP9/9ruOT/LWqp/gAAAAAAAAAAAAAAAAAAAAAoPlj/JUJf/zhrnf82aZr/P3mw/0F3rP8wXYr/MVqC/2Cq2P9eqd7/OHKx/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsuQf8wW4T/Nmmc/0WHvv9Yo9b/O3Kn/y9Ygf8qTXD/JD5Z/yAzR/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJT5a/y1Ue/89ebP/QoK8/zhtof9Ge63/KEho/yVCX/8nPFT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhIlBCM+Wv8sQ17+J0Vj/0N4p/8uVHn/ITpU/yhHZv8hOFD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFY4miKD5Y/yhAW/8zS2j/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD8HwAA/AcAAPgDAADgAwAAwAMAAMADAADAAwAAwAMAAMAHAADgBwAA8AcAAPAPAAD+HwAA//8AAA==" rel="icon" type="image/x-icon" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/feu2lve.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&amp;family=Roboto+Condensed:ital,wght@0,400;0,700;1,700">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style> /* You can add global styles to this file, and also import other style files */
+  <link rel="stylesheet" href="https://use.typekit.net/feu2lve.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<style>
+.myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+  .col {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
 
 * {
   box-sizing: border-box;
 }
 
-h1 {
+
+body,h1,h2,h3,h4,h5,h6 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  color:#d75939;
 }
 
-h3 {
-  text-align: center;
-  color:#d75939;
-}
-
-button {
-  text-align: left;
-  font-weight: bold;
-  border-radius: 25px;
-  background-color: #d75939;
-  color: white;
-  font-size: larger;
-  padding:10px;
-}
-
-
-/* Style the body */
 body {
-  font-family: Comfortaa; 
-  border: 20px solid #5a7238;
+  border: gold solid 10px;
 }
-
-/* Header/logo Title */
-.header {
-  margin-top: 10%;
-  text-align: center; 
-  background-color: white;
-  
-}
-
-
-
-ul {
-  list-style-type: none;
-  margin-left: 40%;
-  padding: 0;
-  overflow: hidden;
- 
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-
-li:last-child {
-  border-right: none;
-}
-
-.navbar {
-  overflow: hidden;
-  color: white;
-  font-family: Comfortaa;
-  margin-right: 10%;
-}
-
-/* Navbar links */
-.navbar a {
-  float: right;
-  display: block;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 12px;
-  text-decoration: none;
-  color: black;
-  border-radius: 25px;
-  margin-top: 3%;
-  font-size: large;
-
-  
-}
-
-/* Navbar links on mouse-over */
-.navbar a:hover {
-  background-color: #d75939;
-  border: orange solid 2px;
-  color: white;
-}
-
-/* Current/active navbar link */
-.active {
-  background-color: #5a7238;
-  color: white;
-}
-
-.fa {
-  padding: 10px;
-  font-size: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-  border: black solid 2px;
-  color: white;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #5a7238;
-  color: white;
-}
-
-.fa-instagram {
-  background: #5a7238;
-  color: white;
-}
-
-.fa-envelope-o {
-  background: #5a7238;
-  color: white;
-}
-/* Column container */
-.row {  
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  display: flex;
-  flex-wrap:wrap;
-  flex: 50%;
-  background-color: white;
-  margin-top: 5%;
-}
-
-/* Main column */
-.main {
-  flex: 25%;
-  background-color: white;
-  width: 30%;
-  margin-right: 10%;
-  font-style: italic;
-  text-align: center;
-}
-
-
 
 .footer {
-  text-align: center;
-  background-color: #d75939;
-  width: 100%;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  background-color: #E08119;
+  margin-top:3%;
+  padding-top: 3%;
 }
 
-.galleryrow {
-display: -ms-flexbox;
-display: flex;
--ms-flex-wrap: wrap;
-flex-wrap: wrap;
-padding: 0 4px;
-margin: 20%;
+.hrnew {
+  border-top: gold solid 1px;
 }
-
-/* Create four equal columns that sits next to each other */
-.gallerycolumn {
--ms-flex: 25%; /* IE10 */
-flex: 25%;
-max-width: 25%;
-padding: 0 4px;
-}
-
-.gallerycolumn img {
-margin-top: 8px;
-vertical-align: middle;
-width: 100%;
-}
-
+/*Slideshow*/
 .mySlides {display: none;}
 img {vertical-align: middle;}
-
 /* Slideshow container */
-.slideshow-container {
-  max-width: 70%;
-  position: relative;
-  border:#d75939 solid 10px;
-  margin-left:8%;
-  margin-bottom: 8%;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
 
 /* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 2 s;
 }
-
-
-.row2 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.column2 {
-  margin-top: 5%;
-  box-sizing: border-box;
-}
-
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-  }
-
-@media screen and (max-width: 700px) {
-  .row2 {
-    flex-direction: column;
-  }
-}
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+.footer {
+  background-color: #E08119;
+  margin-top: 5%;
+  padding-top: 5%;
 }
 
-@media screen and (max-width: 700px) {
-  .row, .nav {   
-    flex-direction: column;
+/* Image Gallery */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
   }
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-.gallerycolumn {
-  -ms-flex: 50%;
-  flex: 50%;
-  max-width: 50%;
-}
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-.gallerycolumn {
-  -ms-flex: 100%;
-  flex: 100%;
-  max-width: 100%;
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+
+.hrnew {
+  border-top: gold solid 10px;
 }
+.center {
+  display: block;
+  margin-left: 5%;
+  margin-right: 5%;
+  width:90%
+  
+}
+.pict {
+margin: 5x;
+}
+
 </style>
 </head>
 
+<body>
+  <header style="margin-top: 3%">
+  <div class="w3-show-inline-block">
+    <div class="w3-bar">
+    <button class="w3-button w3-round-xxlarge w3-hover-yellow" style="background-color:#5a7238; color: white;"><a href="https://queenofacorns.com" style="font-size:larger;"></a>HOME</button>
+    <button class="w3-button w3-round-xxlarge w3-hover-yellow"><a href="https://queenofacorns.com/about.html" style="text-decoration: none; font-size: larger;">ABOUT</a></button>
+    <button class="w3-button w3-round-xxlarge w3-hover-yellow"><a href="https://queenofacorns.com/packages.html" style="text-decoration: none; font-size: larger;">PACKAGES</a></button>
+    <button class="w3-button w3-round-xxlarge w3-hover-yellow"><a href="https://queenofacorns.com/contact.html" style="text-decoration: none; font-size: larger">CONTACT</a></button>
 
-<body>  
- 
-<!-- Navigation Bar -->
-<div class="navbar">
-  <div class="navbar-right">
-  <a class="active" href="https://queenofacorns.com/">Home</a>
-  <a href="#faq">FAQ</a>
-  <a href="#packages">Packages</a>
-  <a href="#about">About</a>
-  <a href="https://www.queenofacorns.com/contact">Contact</a>
+    <br><br>  
+  </div>
+    <div class="w3-bar">
+    <button class="w3-button w3-circle w3-hover-yellow" style="background-color:#5a7238; color: white">
+    <a href="https://www.facebook.com/people/Queen-of-Acorns-Mobile-Bar/100082761544631/" style="text-decoration: none;" class="fa fa-facebook"></a></button>
+    <button class="w3-button w3-circle w3-hover-yellow" style="background-color:#5a7238; color: white">
+      <a href="https://www.instagram.com/queenofacorns/?fbclid=IwAR2dpdROPAguWR-vIeyVQjU0VV4YrBHA_0S1qRuw4uSJExtuQcro4Xwyqiw" style="text-decoration: none;" class="fa fa-instagram"></a></button>
+    <button class="w3-button w3-circle w3-hover-yellow" style="background-color:#5a7238; color: white">
+      <a href="mailto:queenofacorns@yahoo.com" style="text-decoration: none;" class="fa fa-envelope-o"></a></button>
+    <button class="w3-button w3-circle w3-hover-yellow" style="background-color:#5a7238; color: white">
+      <a href="tel:9133372474" style="text-decoration: none;" class="fa fa-phone"></a></button>
   </div>
 </div>
-
-<div class="socials">
-<a href="https://www.instagram.com/queenofacorns/?fbclid=IwAR2dpdROPAguWR-vIeyVQjU0VV4YrBHA_0S1qRuw4uSJExtuQcro4Xwyqiw" class="fa fa-instagram"></a>
-<a href="https://www.facebook.com/people/Queen-of-Acorns-Mobile-Bar/100082761544631/" class="fa fa-facebook"></a>
-<a href="#email" class="fa fa-envelope-o"></a>
 </div>
-
-<!-- Header -->
-<div class="header">
-<img src="https://i.imgur.com/q4HKqOa.png" alt="logo" width="50%">
-<h3><strong>"Why go to the bar, when the bar can come to you!”</strong></h3>
-<h4><em>“Weddings ~ Corporate Events ~ Graduations ~ Birthdays”</em></h4>
-<button><strong>Checkout our packages!</strong></button><br><br><br><hr>
 </div>
- 
-
-<div class="row">
-  <div class="side">
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 10</div>
-  <img src="https://i.imgur.com/QqkuBq8.jpg" style="width:100%">
+<br><br><br>
+    
+    <!-- Header -->
+ <div class="w3-row">  
+  
+<div class="header"><!--The Banner Logo-->
+  <img src="https://i.imgur.com/8oFcRuZ.png" alt="logo" width="70%">
+  <h1 style="font-family: Mrs Eaves Bold; color:#5a7238"><strong>"Why go to the bar, when the bar can come to <em>you</em>!”</strong></h1>
+  <h5 style="">Weddings, Photoshoots, Corporate Events <br>Graduations, Birthdays<br> & MORE!<br></h5><br>
+  <button class="w3-button w3-round-xxlarge" style="background-color:#E08119!important; color: white; font-size:x-large;"><a href="https://queenofacorns.com/packages.html" style="text-decoration:none;"><strong>See Packages</strong></a></button><br><br><br>
+  <hr class="hrnew">
 </div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 10</div>
-  <img src="https://i.imgur.com/UPGGuv3.jpg" style="width:100%">
 </div>
+  </header>
+  
+<!--Slideshow-->
+<div class="w3-row-padding">
+  <div class="w3-center">
+    <div class="w3-half w3-fit" style="border:#E08119 solid 10px">
+      <img class="mySlides fade" src="https://i.imgur.com/QqkuBq8.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/UPGGuv3.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/5Gkoq6p.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/SO3khAb.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/7Rp5wzu.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/49NOqMp.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/UCR9QJQ.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/VzGDLX1.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/6lxUHty.jpg" style="width:100%">
+      <img class="mySlides fade" src="https://i.imgur.com/gyb0Rpl.jpg" style="width:100%">
+      <button class="w3-button" onclick="plusDivs(-1)">❮ Prev |</button>
+      <button class="w3-button" onclick="plusDivs(1)">| Next ❯</button>
+    </div>
+  </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 10</div>
-  <img src="https://i.imgur.com/5Gkoq6p.jpg" style="width:100%">
+  <!-- Cheers with the Queen-->
+  <div class="w3-half w3-center" style="text-align:center; color: goldenrod;">
+    <img src="https://i.imgur.com/EgAqyow.png" style="width:70%"><br>
+    <h3 style="color:#5a7238"><em><strong>Get a Quote Today!</strong></em></h3><br>
+    <button class="w3-button w3-round-xxlarge" style="background-color:#E08119!important; color: white; font-size:x-large;"><a href="https://queenofacorns.com/contact.html" style="text-decoration: none";><strong>Quote</strong></a></button><br><br><br>
+  </div>
 </div>
+<br><br><br><br><br><br>
 
-<div class="mySlides fade">
-  <div class="numbertext">4 / 10</div>
-  <img src="https://i.imgur.com/SO3khAb.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">5 / 10</div>
-  <img src="https://i.imgur.com/7Rp5wzu.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">6 / 10</div>
-  <img src="https://i.imgur.com/49NOqMp.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">7 / 10</div>
-  <img src="https://i.imgur.com/UCR9QJQ.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">8 / 10</div>
-  <img src="https://i.imgur.com/VzGDLX1.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">9 / 10</div>
-  <img src="https://i.imgur.com/6lxUHty.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">10 / 10</div>
-  <img src="https://i.imgur.com/gyb0Rpl.jpg" style="width:100%">
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span>  
-  <span class="dot"></span> 
-  <span class="dot"></span>  
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div></div>
-
-<div class="main">
-  <div style="text-align:center">
-<img src="https://i.imgur.com/EgAqyow.png" style="width:70%" /><br>
-<p style = "text-indent: 8%">Queen of Acorns strives to provide excellent and honest mobile drink and bar services at our customer’s events. Our customer care is unmatched and guarantee you will recieve nothing less than superb service.<br><br> Our team promotes responsible drinking and aims to create a unique enviornment that is safe, comfortable, and fun for all….” </p>
-<br><br><button>Packages</button><br><br><hr>
-</div>"
-</div>
-
+<!-- Gif drinks and 1-4 -->
 <div class="w3-cell-row">
-  <div class="w3-container w3-cell w3-cell-top">
-   <img src="https://i.imgur.com/8Cso76n.gif" style="width:80%"/></a></div>
-   <div class="w3-container w3-cell w3-cell-middle">
-   <h1> 1. Choose your package<br>2. Select add-ons <br>3. Settle up<br>4. GET DOWN WITH THE QUEEN!<br></h1></div>
-   <div class="w3-container w3-cell w3-cell-bottom">
-   <img src="https://i.imgur.com/BsHQI7v.gif" style="width:80%"></a></div>
+  <div class="w3-quarter">
+   <img src="https://i.imgur.com/8Cso76n.gif" style="width:60%"/></a>
+  </div>
+   <div class="w3-half">
+   <h2 style="color:goldenrod"><br> 1. Choose your package<br>2. Select add-ons <br>3. Settle up<br>4. GET DOWN WITH THE QUEEN!<br></h2>
+  </div>
+   <div class="w3-quarter">
+   <img src="https://i.imgur.com/BsHQI7v.gif" style="width:60%"></a>
+  </div>
+  </div>
+  <br><br><br><br><br><br>
+
+  <hr class="hrnew">
+
+  <br>
+  
+
+<!-- Image gallery -->
+<h1 style="color:#5a7238">WE ARE ALIVE<br>WE ARE FREE<br>WE ARE ABLE</h1><br>
+<div class="gallery responsive row center">
+  <div class="col pict">
+    <img class="myImg" src="/Images/HomePageEvent/BailyP.jpeg" alt="bottlepour" class="img-fluid" width="600" height="400">
+  </div>
+
+  <div class="col pict">
+    <img class="myImg" src="/Images/HomePageEvent/BPexpress.jpeg" alt="pouring" width="600" height="400">
+  </div>
+
+  <div class="col pict">
+    <img class="myImg" src="/Images/HomePageEvent/Bailey2.jpeg" alt="drinkpour" width="600" height="400">
+  </div>
+
+  <div class="col pict">
+    <img class="myImg" src="/Images/HomePageEvent/expresso.jpeg" alt="expresso" width="600" height="400">
   </div>
 </div>
 
+<!-- Image gallery 2nd row -->
+
+<div class="responsive gallery row center">
+  <div class="col pict">
+    <img class="myImg" src="/Images/HomePageEvent/group.jpeg" alt="lakeside" width="600" height="400">
+  </div>
+
+  <div class="col pict">
+    <img class="myImg" src="/Images/HomePageEvent/bar1.jpeg" alt="vines" width="600" height="400">
+  </div>
+
+  <div class="col pict">
+    <img class="myImg" src="/Images/HomePageEvent/setup.jpeg" alt="table" width="600" height="400">
+  </div>
+
+  <div class="col pict">
+    <img class="myImg" src="/Images/HomePageEvent/group2.jpeg" alt="picnic" width="600" height="400">
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
 <script>
-  let slideIndex = 0;
-  showSlides();
-  
-  function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  // Get all the elements with class="myImg"
+  var images = document.getElementsByClassName("myImg");
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+
+  // Loop through all the images and attach click event listeners
+  for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    };
   }
-  </script>
- 
-<div class="galleryrow">
-  <div class="gallerycolumn">
-    <img src="https://i.imgur.com/UcH7BVL.jpg">
-    <img src="https://i.imgur.com/QXvzwyR.jpg">
-  </div>
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  };
+</script>
+
+
   
-<div class="gallerycolumn">
-  <img src="https://i.imgur.com/Z6Kdli4.jpg">
-  <img src="https://i.imgur.com/iajz1F3.jpg">
-</div>
-      
-<div class="gallerycolumn">
-  <img src="https://i.imgur.com/qBX1eBG.jpg">
-  <img src=" https://i.imgur.com/1UBOnSw.jpg">
-</div>
-
-<div class="gallerycolumn">
-  <img src="https://i.imgur.com/Z6Kdli4.jpg">
-  <img src="https://i.imgur.com/b0MT7KC.jpg">
-</div>
-        
-
-      
-</div>
-</div>
-
+  <div class="clearfix"></div>
+<br><br><br><br>
 <!-- Footer -->
-
-
 <div class="footer">
-  
+  <div class="w3-show-inline-block">
+    <div class="w3-bar">
+      <button class="w3-button w3-round-xxlarge w3-hover-yellow"><a href="https://queenofacorns.com" style="text-decoration: none; color: white; font-size: large;">HOME</a></button>
+      <button class="w3-button w3-round-xxlarge w3-hover-yellow"><a href="https://queenofacorns.com/about.html" style="text-decoration: none; color: white; font-size: large;">ABOUT</a></button>
+      <button class="w3-button w3-round-xxlarge w3-hover-yellow"><a href="https://queenofacorns.com/packages.html" style="text-decoration: none; color: white; font-size: large;">PACKAGES</a></button>
+      <button class="w3-button w3-round-xxlarge w3-hover-yellow"><a href="https://queenofacorns.com/contact.html" style="text-decoration: none; color: white; font-size: large;">CONTACT</a></button>
+    </div>
     
-<ul>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#packages">Packages</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#home">Home</a></li>
-</ul>
+    <br><br>
+   
+    <h5 style="color:white;">QUESTIONS?</h5><p style="color:white;">Call or Text: <a href="tel:9133372474">(913) 337-2474</a>
+<br>Email: <a href="mailto:queenofacorns@yahoo.com">queenofacorns@yahoo.com</a></h6><br><br><br>
 
-<a href="https://www.instagram.com/queenofacorns/?fbclid=IwAR2dpdROPAguWR-vIeyVQjU0VV4YrBHA_0S1qRuw4uSJExtuQcro4Xwyqiw" class="fa fa-instagram"></a>
-    <a href="https://www.facebook.com/people/Queen-of-Acorns-Mobile-Bar/100082761544631/" class="fa fa-facebook"></a>
-    <a href="#email" class="fa fa-envelope-o"></a><br><hr>
- <h5 style="color:white">© Queen of Acorns 2023</h5>
-</div>  
+    <div class="w3-bar">
+      <button class="w3-button w3-circle w3-hover-yellow" style="background-color:white; color:#E08119">
+      <a href="https://www.facebook.com/people/Queen-of-Acorns-Mobile-Bar/100082761544631/" style="text-decoration: none;" class="fa fa-facebook"></a></button>
+      <button class="w3-button w3-circle w3-hover-yellow" style="background-color:white; color: #E08119">
+      <a href="https://www.instagram.com/queenofacorns/?fbclid=IwAR2dpdROPAguWR-vIeyVQjU0VV4YrBHA_0S1qRuw4uSJExtuQcro4Xwyqiw" style="text-decoration: none;" class="fa fa-instagram"></a></button>
+      <button class="w3-button w3-circle w3-hover-yellow" style="background-color:white; color:#E08119">
+      <a href="mailto:queenofacorns@yahoo.com" style="text-decoration: none;" class="fa fa-envelope-o"></a></button>
+      <button class="w3-button w3-circle w3-hover-yellow" style="background-color:white; color: #E08119">
+      <a href="tel:9133372474" style="text-decoration: none;" class="fa fa-phone"></a></button>
+    </div>
 
+     <br><hr> 
+    
+      <p style="color:white">&#10048;<br>Queen of Acorns<br>© 2023<br></p>
+  </div> 
+</div>
+
+<script>
+
+  /*Slideshow*/
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+  }
+
+  /* back/next arrows */
+  var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+
+    
+</script>
 </body>
 </html>
